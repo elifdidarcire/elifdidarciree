@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Aurora - Sıkça Sorulan Sorular</title>
+  <link rel="stylesheet" href="css/sss.css" />
+</head>
+<body>
+  <header>
+    <h1>Sıkça Sorulan Sorular</h1>
+  </header>
+  <main>
+    <section class="sss-container">
+      <div class="soru-cevap">
+        <h2>Kargo Süresi Ne Kadar?</h2>
+        <p>Ürünleriniz genellikle 3-5 iş günü içinde kapınıza teslim edilir.</p>
+      </div>
+      <div class="soru-cevap">
+        <h2>İade Koşulları Nelerdir?</h2>
+        <p>Ürün teslim tarihinden itibaren 14 gün içinde iade edebilirsiniz. Ürünlerin kullanılmamış ve orijinal paketinde olması gerekmektedir.</p>
+      </div>
+      <div class="soru-cevap">
+        <h2>Ürünleriniz Hayvanlar Üzerinde Test Ediliyor Mu?</h2>
+        <p>Hayır, Aurora ürünleri %100 cruelty-free olarak üretilmektedir.</p>
+      </div>
+      <div class="soru-cevap">
+        <h2>Nasıl Sipariş Verebilirim?</h2>
+        <p>Ürünleri ana sayfadaki ürünler bölümünden seçip sepete ekleyerek kolayca sipariş verebilirsiniz.</p>
+      </div>
+      <div class="soru-cevap">
+        <h2>Ödeme Seçenekleri Nelerdir?</h2>
+        <p>Kredi kartı, banka kartı ve kapıda ödeme seçenekleri mevcuttur.</p>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    document.querySelectorAll('.soru-cevap h2').forEach(baslik => {
+      baslik.style.cursor = 'pointer';
+      baslik.addEventListener('click', () => {
+        const cevap = baslik.nextElementSibling;
+        if (cevap.style.display === 'block') {
+          cevap.style.display = 'none';
+          baslik.style.color = '#d95c8f';
+        } else {
+          cevap.style.display = 'block';
+          baslik.style.color = '#f9a7c1';
+        }
+      });
+
+      
+      baslik.nextElementSibling.style.display = 'none';
+    });
+  </script>
+</body>
+</html>
