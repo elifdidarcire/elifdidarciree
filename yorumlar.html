@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Aurora - Kullanıcı Yorumları</title>
+  <link rel="stylesheet" href="css/yorumlar.css" />
+</head>
+<body>
+  <header>
+    <h1>Kullanıcı Yorumları</h1>
+  </header>
+  <main>
+    <section class="yorum-kutulari" id="yorumListesi">
+      <div class="yorum">
+        <h3>Elif A.</h3>
+        <p>"C vitamini serumu harika! Cildim daha aydınlık ve canlı görünüyor. Paketleme de çok özenliydi."</p>
+      </div>
+      <div class="yorum">
+        <h3>Burcu K.</h3>
+        <p>"Moustire Boost nemlendiriciyi ilk kez denedim, cildim pamuk gibi oldu. Tekrar sipariş edeceğim!"</p>
+      </div>
+      <div class="yorum">
+        <h3>Gizem D.</h3>
+        <p>"Ürünlerin kokusu ve dokusu çok hoşuma gitti. Ayrıca hayvanlar üzerinde test edilmemesi büyük artı!"</p>
+      </div>
+      <div class="yorum">
+        <h3>Nazlı S.</h3>
+        <p>"Hızlı kargo ve kaliteli ürünler. Aurora artık vazgeçilmezim."</p>
+      </div>
+    </section>
+
+    <section class="yorum-ekle">
+      <h2>Yorum Ekle</h2>
+      <form id="yorumFormu">
+        <input type="text" id="isim" placeholder="Adınız" required />
+        <textarea id="yorum" placeholder="Yorumunuz" required></textarea>
+        <button type="submit">Gönder</button>
+      </form>
+    </section>
+  </main>
+
+  <script>
+    document.getElementById("yorumFormu").addEventListener("submit", function (e) {
+      e.preventDefault();
+      const isim = document.getElementById("isim").value;
+      const yorum = document.getElementById("yorum").value;
+
+      if (isim && yorum) {
+        const yeniYorum = document.createElement("div");
+        yeniYorum.className = "yorum";
+        yeniYorum.innerHTML = `<h3>${isim}</h3><p>"${yorum}"</p>`;
+
+        document.getElementById("yorumListesi").appendChild(yeniYorum);
+
+        document.getElementById("yorumFormu").reset();
+      }
+    });
+  </script>
+</body>
+</html>
