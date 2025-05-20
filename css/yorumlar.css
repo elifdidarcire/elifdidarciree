@@ -1,0 +1,83 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fce8f1;
+  margin: 0;
+  padding: 20px;
+  color: #333;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+header h1 {
+  color: #d95c8f;
+  font-size: 2.5rem;
+}
+
+main {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.yorum-kutulari {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.yorum {
+  background-color: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(217, 92, 143, 0.2);
+}
+
+.yorum h3 {
+  margin-top: 0;
+  color: #d95c8f;
+}
+
+.yorum p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.yorum-ekle {
+  margin-top: 50px;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(217, 92, 143, 0.2);
+}
+
+.yorum-ekle h2 {
+  color: #d95c8f;
+  margin-top: 0;
+}
+
+.yorum-ekle input,
+.yorum-ekle textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 12px 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.yorum-ekle button {
+  background-color: #d95c8f;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.yorum-ekle button:hover {
+  background-color: #c14e7d;
+}

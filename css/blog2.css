@@ -1,0 +1,80 @@
+/* Blog 2 Sayfası için Özel Stil */
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fff0f6; /* Hafif pembe ton */
+  color: #4a2c52;
+  margin: 0;
+  padding: 0 20px;
+}
+
+header, footer {
+  background-color: #d94e9a;
+  color: white;
+  padding: 15px 20px;
+  text-align: center;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 12px;
+  font-weight: 600;
+}
+
+nav a.active, nav a:hover {
+  text-decoration: underline;
+}
+
+main {
+  max-width: 900px;
+  margin: 30px auto;
+  background-color: #ffffff;
+  padding: 25px 35px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(217, 78, 154, 0.2);
+}
+
+article h2 {
+  font-size: 2.4rem;
+  margin-bottom: 10px;
+  color: #d94e9a;
+}
+
+.date {
+  font-size: 0.9rem;
+  color: #a77c9b;
+  margin-bottom: 25px;
+  font-style: italic;
+}
+
+article p {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  margin-bottom: 18px;
+  color: #5a3a68;
+}
+
+footer p {
+  font-size: 0.9rem;
+}
+
+/* Responsive Tasarım */
+@media (max-width: 600px) {
+  main {
+    padding: 20px;
+    margin: 15px;
+  }
+
+  article h2 {
+    font-size: 1.8rem;
+  }
+
+  article p {
+    font-size: 1rem;
+  }
+
+  nav a {
+    margin: 0 8px;
+  }
+}
